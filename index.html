@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI DJ WEB APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+    <style>
+      body {
+        background-image: url("background.jpg");
+        background-size: cover;
+    }
+    
+    .heading {
+        width: 100%;
+        margin: 0px;
+        font-size: 25px;
+    }
+    
+    .note {
+        color: black;
+        font-size: 15px !important;
+    }
+    
+    .disk {
+        width: 200px;
+        border-radius: 100px;
+    }
+    
+    .data {
+        background-color: orange;
+        border-radius: 20px;
+        width: fit-content;
+        height: fit-content;
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    .divSpeed {
+        float: left;
+    }
+    
+    .divSound {
+        float: right;
+    }
+
+    .play {
+      margin: 10px;
+      padding: 10px;
+      font-size: 25px;
+    }
+
+    canvas {
+        border-radius: 25px;
+        border-width: 5px;
+        border-color: whitesmoke;
+      border-style: solid;
+        background-color: grey;
+      margin-top: 135px;
+    }
+    </style>
+</head>
+<body>
+  	<h3 class="btn btn-warning heading">AI DJ WEB APP
+	    <br>
+	    <span class="note">NOTE - Move your left-hand wrist up and down for increasing and decreasing the volume. 
+        Move your right-hand wrist up and down for increasing and decreasing the speed</span>
+  	</h3>
+    <center class="container">
+	<br><br>
+  <div class="divSpeed">
+    <img src="disk.gif" class="disk">
+    <br>
+    <label id="speed" class="data">Speed:</label>
+  </div>
+  <div class="divSound">
+    <img src="disk.gif" class="disk">
+    <br>
+    <label id="volume" class="data">Volume:</label>
+  </div>
+  <button class="btn btn-success play" onclick="play()">Play Song</button>
+</center>
+<script src="main.js"></script>
+</body>
+</html>
